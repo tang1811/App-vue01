@@ -1,6 +1,6 @@
 <template>
   <div class="container mt-4">
-    <h2 class="mb-3">รายการประเภทสินค้า</h2>
+    <h2 class="mb-3">รายการพนักงาน</h2>
     
     <!-- ตารางแสดงข้อมูลลูกค้า -->
     <table class="table table-bordered table-striped">
