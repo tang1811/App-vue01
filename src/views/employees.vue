@@ -1,6 +1,6 @@
 <template>
   <div class="container mt-4">
-    <h2 class="mb-3">รายการพนักงาน</h2>
+    <h2 class="mb-3">รายชื่อพนักงาน</h2>
     
     <!-- ตารางแสดงข้อมูลลูกค้า -->
     <table class="table table-bordered table-striped">
@@ -11,20 +11,26 @@
           <th>แผนก</th>
           <th>เงินเดือน</th>
           <th>สถานะ</th>
-          <th>วันที่สร้าง</th>
+          <th>วันที่เริ่มงาน</th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(employees) in employees" :key="employees.emp_id">
+        <tr v-for="employees in employeess" :key="employees.emp_id">
           <td>{{ employees.emp_id }}</td>
           <td>{{ employees.full_name }}</td>
           <td>{{ employees.department }}</td>
           <td>{{ employees.salary }}</td>
           <td>{{ employees.active }}</td>
           <td>{{ employees.created_at }}</td>
+
         </tr>
       </tbody>
     </table>
+
+    <div class="mb-3 text-end">
+    <a class="btn btn-primary" href="/add_employees" role="button">Add+</a>
+    </div>
+
 
     <!-- Loading -->
     <div v-if="loading" class="text-center">
@@ -42,20 +48,20 @@
 import { ref, onMounted } from "vue";
 
 export default {
-  name: "TypeList",
+  name: "EmployeesList",
   setup() {
-    const employees = ref([]);
+    const employeess = ref([]);
     const loading = ref(true);
     const error = ref(null);
 
     // ฟังก์ชันดึงข้อมูลจาก API
-    const fetchEmployees = async () => {
+    const fetchEmployeess = async () => {
       try {
-        const response = await fetch("http://localhost/app-vue01/php_api/show_employee.php");
+        const response = await fetch("http://localhost/App-vue01/php_api/employees.php");
         if (!response.ok) {
           throw new Error("ไม่สามารถดึงข้อมูลได้");
         }
-        employees.value = await response.json();
+        employeess.value = await response.json();
       } catch (err) {
         error.value = err.message;
       } finally {
@@ -64,11 +70,11 @@ export default {
     };
 
     onMounted(() => {
-      fetchEmployees();
+      fetchEmployeess();
     });
 
     return {
-      employees: employees,
+      employeess,
       loading,
       error
     };
