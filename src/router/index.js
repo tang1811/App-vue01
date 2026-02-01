@@ -72,6 +72,12 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "type" */ "../views/Employees_crud.vue"),
   },
+  {
+    path: "/type_crud",
+    name: "type_crud",
+    component: () =>
+      import(/* webpackChunkName: "type" */ "../views/type_crud.vue"),
+  },
 ];
 
 const router = createRouter({

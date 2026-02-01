@@ -66,6 +66,9 @@
                 <li >
                   <a class="dropdown-item" href="/employees_crud">Employees_crud</a>
                 </li>
+                <li >
+                  <a class="dropdown-item" href="/type_crud">Type_crud</a>
+                </li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
                   <a class="dropdown-item" href="#">Something else here</a>
