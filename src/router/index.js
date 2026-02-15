@@ -22,7 +22,7 @@ const routes = [
   {
     path: "/type",
     name: "tpye",
-    component: () => import(/* webpackChunkName: "type" */ "../views/type.vue"),
+    component: () => import(/* webpackChunkName: "type" */ "../views/Type.vue"),
   },
   {
     path: "/employees",
@@ -77,6 +77,24 @@ const routes = [
     name: "type_crud",
     component: () =>
       import(/* webpackChunkName: "type" */ "../views/type_crud.vue"),
+  },
+  {
+    path: "/student_crud",
+    name: "student_crud",
+    component: () =>
+      import(/* webpackChunkName: "type" */ "../views/Student_crud.vue"),
+  },
+  {
+    path: "/product_crud",
+    name: "product_crud",
+    component: () =>
+      import(/* webpackChunkName: "type" */ "../views/Product_crud.vue"),
+  },
+  {
+    path: "/employee_crud_image",
+    name: "employee_crud_image",
+    component: () =>
+      import(/* webpackChunkName: "type" */ "../views/Employees_crud_image.vue"),
   },
 ];
 

@@ -28,22 +28,10 @@
               <a class="nav-link active" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/Customer">Customer</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/type">Type</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/employees">Employees</a>
+              <a class="nav-link" href="/student_crud">Student_crud</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/Contact">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/product">Product</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/product_api">Product_api</a>
             </li>
 
             <li class="nav-item dropdown">
@@ -53,42 +41,90 @@
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
-              >
-                Dropdown
-              </a>
+              >Employees</a>
               <ul class="dropdown-menu">
-                <li >
-                  <a class="dropdown-item" href="/show_product">Show_product</a>
+                <li>
+                  <a class="dropdown-item" href="/employees">Employees</a>
                 </li>
-                <li >
-                  <a class="dropdown-item" href="/customer_crud">Customer_crud</a>
-                </li>
-                <li >
+
+                <li>
                   <a class="dropdown-item" href="/employees_crud">Employees_crud</a>
                 </li>
-                <li >
-                  <a class="dropdown-item" href="/type_crud">Type_crud</a>
-                </li>
-                <li><hr class="dropdown-divider" /></li>
+
                 <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
+                  <a class="dropdown-item" href="/employee_crud_image">Employees crud Image</a>
                 </li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >Customer</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/Customer">Customer</a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="/customer_crud">Customer_crud</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >Product</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/product">product</a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="/show_product">Show_product</a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="/product_crud">Product Crud</a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="/product_api">Product_api</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >Type</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/type">Type</a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="/Type_crud">Type_crud</a>
+                </li>
+              </ul>
             </li>
           </ul>
           <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
         </div>
       </div>
