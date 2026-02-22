@@ -31,6 +31,9 @@
               <a class="nav-link" href="/student_crud">Student_crud</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/show_product">product</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="/Contact">Contact</a>
             </li>
 
@@ -83,20 +86,17 @@
               </ul>
             </li>
 
-            <li class="nav-item dropdown">
+            <li v-if="isLoggedIn" class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
-                >Product</a
-              >
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="/product">product</a>
-                </li>
+                >Product Admin
+              </a>
 
+              <ul class="dropdown-menu">
                 <li v-if="isLoggedIn">
                   <a class="dropdown-item" href="/show_product">Show_product</a>
                 </li>
